@@ -1,0 +1,18 @@
+body{
+    background-color: #DEF9C4;
+}
+.Parte_1 img{
+    float: right;
+    margin-right: 20px;
+}
+
+.textoIMG{
+    padding-top: 35px;
+    margin-left: 100px;
+}
+#imagem{
+    width: 250px;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-left: 200px;
+}

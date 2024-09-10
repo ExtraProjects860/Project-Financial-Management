@@ -1,6 +1,8 @@
 body{
     background-color: #DEF9C4;
 }
+
+/* Css Responsavel por alterar a parte do branding do site*/
 .Parte_1 img{
     float: right;
     margin-right: 20px;
@@ -15,4 +17,20 @@ body{
     margin-right: 200px;
     margin-top: 60px;
     margin-left: 200px;
+}
+
+/* CSS responsavel pela a primeira descrição sobre os recurços do site */
+
+.funcionalidades_1{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.funcionalidades_1 img{
+    float: left;
+    width: 55px;
+}
+
+.funcionalidades_1 p {
+    margin-top: 4px;
 }

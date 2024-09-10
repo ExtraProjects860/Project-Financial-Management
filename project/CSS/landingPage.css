@@ -22,6 +22,7 @@ body{
 /* CSS responsavel pela a primeira descrição sobre os recurços do site */
 
 .funcionalidades_1{
+    float: left;
     margin-left: 100px;
     margin-top: 50px;
 }
@@ -33,4 +34,5 @@ body{
 
 .funcionalidades_1 p {
     margin-top: 4px;
+    margin-left: 70px;
 }

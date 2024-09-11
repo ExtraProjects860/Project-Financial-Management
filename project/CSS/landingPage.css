@@ -21,18 +21,76 @@ body{
 
 /* CSS responsavel pela a primeira descrição sobre os recurços do site */
 
-.funcionalidades_1{
-    float: left;
+#funcionalidades_1_btn{
     margin-left: 100px;
     margin-top: 50px;
 }
 
-.funcionalidades_1 img{
+#descrição_1{
+    margin-top: 50px;
+    margin-left: 150px;
     float: left;
-    width: 55px;
 }
 
-.funcionalidades_1 p {
-    margin-top: 4px;
-    margin-left: 70px;
+#descrição_1 img{
+    margin-right: 10px;
+    width: 65px;
+    float: left;
+}
+
+#descrição_2 {
+    margin-top: 50px;
+    margin-left: 45%;
+    
+    
+}
+
+#descrição_2 img{
+    margin-right: 15px;
+    width: 65px;
+    float: left;
+}
+
+#div_espaço{
+    margin-bottom: 100px;
+}
+
+
+/*Css para a parte 2 do site*/
+
+.Parte_2{
+    text-align: center;
+}
+
+.Parte_2 img{
+    width: 60px;
+}
+
+.teste{
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+.teste ul{
+    border: none;
+}
+
+.teste ul li {
+    background-color: #DEF9C4;
+    border: none;
+}
+
+.teste ul li img{
+    width: 50px;
+    float: left;
+}
+
+.teste ul li h3{
+    margin-left: 80px;
+}
+
+.teste ul li p{
+    margin-top: 20px;
 }

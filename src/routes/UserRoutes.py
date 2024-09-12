@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request, Response
 from src.controller.UserController import UserController
+from src.middleware.middleware_validator import validate_body_in_request
 
 user_routes = Blueprint('user_routes', __name__)
 
@@ -7,7 +8,10 @@ user_routes = Blueprint('user_routes', __name__)
 def create_user() -> tuple[Response, int]:
     try:
         data = request.get_json()
-        print(data)
+
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
+
         user_controller = UserController(
             email=data["email"],
             password=data["password"],
@@ -20,13 +24,17 @@ def create_user() -> tuple[Response, int]:
 
         return jsonify({"message": "User created successfully"}), 201
     except Exception as e:
-        return jsonify({"message": "Error creating user: " + str(e)}), 500
+        return jsonify({"error": "Error creating user: " + str(e)}), 500
     
 
 @user_routes.route("/login", methods=["POST"])
 def login() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
+        
         user_controller = UserController(
             email=data["email"],
             password=data["password"],
@@ -35,11 +43,11 @@ def login() -> tuple[Response, int]:
             monthlyIncome=None,
         )
 
-        token: str = user_controller.login_user()
+        token, data_user = user_controller.login_user()
 
-        return jsonify({"token": token}), 200
+        return jsonify({"message": "User logged in successfully", "token": token, "data_user": data_user}), 200
     except Exception as e:
-        return jsonify({"message": str(e)}), 500
+        return jsonify({"error": str(e)}), 500
     
 
 @user_routes.route("/logout", methods=["POST"])
@@ -58,7 +66,7 @@ def logout() -> tuple[Response, int]:
 
         return jsonify({"message": "User logged out successfully"}), 200
     except Exception as e:
-        return jsonify({"message": str(e)}), 500
+        return jsonify({"error": str(e)}), 500
     
 
 @user_routes.route("/update-user", methods=["PUT"])
@@ -66,6 +74,10 @@ def logout() -> tuple[Response, int]:
 def update_user() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
+        
         user_controller = UserController(
             email=data["email"],
             password=None,
@@ -78,13 +90,17 @@ def update_user() -> tuple[Response, int]:
 
         return jsonify({"message": "User updated successfully"}), 200
     except Exception as e:
-        return jsonify({"message": str(e)}), 500
+        return jsonify({"error": str(e)}), 500
     
 
 @user_routes.route("/reset-password", methods=["POST"])
 def reset_password() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
+        
         user_controller = UserController(
             email=data["email"],
             password=None,
@@ -96,4 +112,4 @@ def reset_password() -> tuple[Response, int]:
 
         return jsonify({"message": "Password reset email sent successfully"}), 200
     except Exception as e:
-        return jsonify({"message": str(e)}), 500
+        return jsonify({"error": str(e)}), 500

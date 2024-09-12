@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request, Response, session
 from src.controller.FinancialAccountsController import FinancialAccountsController
 from src.controller.UserController import UserController
+from src.middleware.middleware_validator import validate_body_in_request
 
 financial_accounts_routes = Blueprint('financial_accounts_routes', __name__)
 
@@ -9,6 +10,9 @@ financial_accounts_routes = Blueprint('financial_accounts_routes', __name__)
 def create_financial_accounts() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
         
         data_account: dict = {
             "description": data["description"],
@@ -28,7 +32,7 @@ def create_financial_accounts() -> tuple[Response, int]:
         
         return jsonify({"message": "Financial account created successfully"}), 201
     except Exception as e:
-        return jsonify({"message": "Error creating financial accounts: " + str(e)}), 500
+        return jsonify({"error": "Error creating financial accounts: " + str(e)}), 500
 
 
 @financial_accounts_routes.route("/update-financial-accounts", methods=["PUT"])
@@ -36,6 +40,9 @@ def create_financial_accounts() -> tuple[Response, int]:
 def update_financial_accounts() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
         
         data_account: dict = {
             "description": data["description"],
@@ -55,7 +62,7 @@ def update_financial_accounts() -> tuple[Response, int]:
 
         return jsonify({"message": "Financial account updated successfully"}), 200
     except Exception as e:
-        return jsonify({"message": "Error updating financial accounts: " + str(e)}), 500
+        return jsonify({"error": "Error updating financial accounts: " + str(e)}), 500
     
 
 @financial_accounts_routes.route("/delete-financial-accounts", methods=["DELETE"])
@@ -63,6 +70,9 @@ def update_financial_accounts() -> tuple[Response, int]:
 def delete_financial_accounts() -> tuple[Response, int]:
     try:
         data = request.get_json()
+        
+        if not validate_body_in_request(data):
+            return jsonify({"error": "Missing required fields"}), 400
         
         financial_accounts_controller = FinancialAccountsController(
             idUser=session["uid"],
@@ -74,4 +84,4 @@ def delete_financial_accounts() -> tuple[Response, int]:
 
         return jsonify({"message": "Financial account deleted successfully"}), 200
     except Exception as e:
-        return jsonify({"message": "Error deleting financial accounts: " + str(e)}), 500
+        return jsonify({"error": "Error deleting financial accounts: " + str(e)}), 500

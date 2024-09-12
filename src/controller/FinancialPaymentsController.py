@@ -2,13 +2,13 @@ from src.config.FirebaseService import FirebaseService
 from src.model.FinancialPaymentsModel import FinancialPaymentsModel
 
 class FinancialPaymentsController(FinancialPaymentsModel):
-    def __init__(self, idUser: str, type_account: str, meta: float) -> None:
+    def __init__(self, idUser: str, type_account: str, meta: float):
         super().__init__(idUser, type_account, meta)
         self.firebase_service = FirebaseService()
         
         
-    def get_all_payments(self) -> list:
-        document = self.firebase_service.get_document('financialPayments', self.idUser)
+    def get_all_payments(self, idUser: str) -> list:
+        document = self.firebase_service.get_document('financialPayments', idUser)
         return document.val()
 
 
@@ -42,6 +42,22 @@ class FinancialPaymentsController(FinancialPaymentsModel):
             
         self.firebase_service.update_document('financialPayments', self.idUser, update_data)
         self.firebase_service.remove_item_in_document('financialPayments', self.idUser, self.type_account)
+        
+    
+    def update_meta_type_account(self) -> None:
+        document = self.firebase_service.get_document('financialPayments', self.idUser)
+        old_data = document.val().get(self.type_account, {})
+        
+        if not old_data:
+            raise Exception("Old account type not found")
+        
+        update_data: dict = {
+                f"{self.type_account}": {
+                    "meta": self.meta
+                }
+            }
+            
+        self.firebase_service.update_document('financialPayments', self.idUser, update_data)
         
         
     def delete_type_account(self) -> None:

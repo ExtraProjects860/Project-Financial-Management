@@ -45,20 +45,18 @@ class UserController(UserModel):
             raise Exception(str(e))
                 
     
-    def login_user(self) -> str:
+    def login_user(self) -> tuple[str, dict[str, str | int]]:
         user = self.firebase_service.get_auth().sign_in_with_email_and_password(
             email=self.email,
             password=self.password
         )
         
-        print(user)
-        token: str = user['idToken']
-        session['token'] = token
-        session['uid'] = user['localId']
+        payload_data_user: dict = self.firebase_service.get_document('users', user['localId']).val()
         
-        print(self.get_information_user(session['token']))
+        session['token'] = user['idToken']
+        session['uid'] = user['localId']
 
-        return token
+        return session['token'], payload_data_user
     
     
     def update_user(self) -> None:

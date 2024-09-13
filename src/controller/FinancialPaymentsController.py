@@ -53,6 +53,7 @@ class FinancialPaymentsController(FinancialPaymentsModel):
         
         update_data: dict = {
                 f"{self.type_account}": {
+                    "accounts": old_data["accounts"],
                     "meta": self.meta
                 }
             }

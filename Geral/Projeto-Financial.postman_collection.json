@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "b9e60d5a-4108-4e33-8e7f-fe7e1eb0ae4f",
+		"name": "Projeto-Financial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37394175"
+	},
+	"item": [
+		{
+			"name": "financial-payments",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/create-financial-payments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU1ODMzODYsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTU4MzM4NiwiZXhwIjoxNzI1NTg2OTg2LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.gN9j9cdEhTFMvq67vPfMiBouarxxp842ANppwaLMFVXDjjYfNFSCsif_4QKvgJErPB__TVp7kskDJiN-Kd_q3hBkM0au4Is_0IOnm7pRhy3P6AJZqWoLZOSCEMrSOk4yhHVQF7JSMko90jCq9gxQLcoTixFqCYtEt2KUjJk0hjf-E4K0i74P-TljscC0tD_D2jqWXkRB8R2PRx4nPoZ6vG2aKOy4IKhcstXqz5cJpLZPKuTS1kQngB7Q4iqmcdCpljkfIOi21hnZhcnDUKFh3Br3y-rb3-nDR7VvvIg9EDXOb-yqbVT_ryqFzMvSP4Q2ekNyJiI6t3J3v3ianL_WFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Contas de Lazer\",\r\n    \"meta\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/create-financial-payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"create-financial-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/get-financial-payments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU1ODMzODYsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTU4MzM4NiwiZXhwIjoxNzI1NTg2OTg2LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.gN9j9cdEhTFMvq67vPfMiBouarxxp842ANppwaLMFVXDjjYfNFSCsif_4QKvgJErPB__TVp7kskDJiN-Kd_q3hBkM0au4Is_0IOnm7pRhy3P6AJZqWoLZOSCEMrSOk4yhHVQF7JSMko90jCq9gxQLcoTixFqCYtEt2KUjJk0hjf-E4K0i74P-TljscC0tD_D2jqWXkRB8R2PRx4nPoZ6vG2aKOy4IKhcstXqz5cJpLZPKuTS1kQngB7Q4iqmcdCpljkfIOi21hnZhcnDUKFh3Br3y-rb3-nDR7VvvIg9EDXOb-yqbVT_ryqFzMvSP4Q2ekNyJiI6t3J3v3ianL_WFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/get-financial-payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get-financial-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/rename-type-account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU1ODMzODYsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTU4MzM4NiwiZXhwIjoxNzI1NTg2OTg2LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.gN9j9cdEhTFMvq67vPfMiBouarxxp842ANppwaLMFVXDjjYfNFSCsif_4QKvgJErPB__TVp7kskDJiN-Kd_q3hBkM0au4Is_0IOnm7pRhy3P6AJZqWoLZOSCEMrSOk4yhHVQF7JSMko90jCq9gxQLcoTixFqCYtEt2KUjJk0hjf-E4K0i74P-TljscC0tD_D2jqWXkRB8R2PRx4nPoZ6vG2aKOy4IKhcstXqz5cJpLZPKuTS1kQngB7Q4iqmcdCpljkfIOi21hnZhcnDUKFh3Br3y-rb3-nDR7VvvIg9EDXOb-yqbVT_ryqFzMvSP4Q2ekNyJiI6t3J3v3ianL_WFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Conta Corrente\",\r\n    \"new_type_account\": \"Conta Corrente 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/rename-type-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"rename-type-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/delete-type-account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU1ODMzODYsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTU4MzM4NiwiZXhwIjoxNzI1NTg2OTg2LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.gN9j9cdEhTFMvq67vPfMiBouarxxp842ANppwaLMFVXDjjYfNFSCsif_4QKvgJErPB__TVp7kskDJiN-Kd_q3hBkM0au4Is_0IOnm7pRhy3P6AJZqWoLZOSCEMrSOk4yhHVQF7JSMko90jCq9gxQLcoTixFqCYtEt2KUjJk0hjf-E4K0i74P-TljscC0tD_D2jqWXkRB8R2PRx4nPoZ6vG2aKOy4IKhcstXqz5cJpLZPKuTS1kQngB7Q4iqmcdCpljkfIOi21hnZhcnDUKFh3Br3y-rb3-nDR7VvvIg9EDXOb-yqbVT_ryqFzMvSP4Q2ekNyJiI6t3J3v3ianL_WFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Contas de Lazer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/delete-type-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete-type-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "financial-payments-logic",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/sum-total-type-account-payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAyMTAwNzE2ZmRkOTA0ZTViNGQ0OTExNmZmNWRiZGZjOTg5OTk0MDEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjYxNjg3OTAsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNjE2ODc5MCwiZXhwIjoxNzI2MTcyMzkwLCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.JYc-2Fwwx7wOJKY0gHnGTu0DmsHZZk4noW7Pk3pu2zIIjmQRJ3Wu-OX4PqOFAmQwlISue6H1Gwxase_sZr5wwXxWf0cgMkLtNgKesqekJjE8qeGVQh4KpqWaCjz7v9oCvm9BebSG3qulQsVx9wlEje8t4WobnsRvydBP2kCYZ131LcvdBlgNtycF448wAC6K8D_MX1CFrHQ-F2ZBjr6iqy23oa2mHG6zzeF7ODW31Uf-RHhccUJjk6NNxUBvdzFQ7DowA5y9eoN1-_7Td4j3A8HRvrPUOkmTxabfdSVNzwsMENF5mW1SE-NCDSUN3hpQbj38ZYIKtIE6Dpc3laqWGQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/sum-total-type-account-payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sum-total-type-account-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/sum-total-balance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAyMTAwNzE2ZmRkOTA0ZTViNGQ0OTExNmZmNWRiZGZjOTg5OTk0MDEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjYxNjg3OTAsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNjE2ODc5MCwiZXhwIjoxNzI2MTcyMzkwLCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.JYc-2Fwwx7wOJKY0gHnGTu0DmsHZZk4noW7Pk3pu2zIIjmQRJ3Wu-OX4PqOFAmQwlISue6H1Gwxase_sZr5wwXxWf0cgMkLtNgKesqekJjE8qeGVQh4KpqWaCjz7v9oCvm9BebSG3qulQsVx9wlEje8t4WobnsRvydBP2kCYZ131LcvdBlgNtycF448wAC6K8D_MX1CFrHQ-F2ZBjr6iqy23oa2mHG6zzeF7ODW31Uf-RHhccUJjk6NNxUBvdzFQ7DowA5y9eoN1-_7Td4j3A8HRvrPUOkmTxabfdSVNzwsMENF5mW1SE-NCDSUN3hpQbj38ZYIKtIE6Dpc3laqWGQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/sum-total-balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sum-total-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/verify-type-account-not-pay",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAyMTAwNzE2ZmRkOTA0ZTViNGQ0OTExNmZmNWRiZGZjOTg5OTk0MDEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjYxNjg3OTAsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNjE2ODc5MCwiZXhwIjoxNzI2MTcyMzkwLCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.JYc-2Fwwx7wOJKY0gHnGTu0DmsHZZk4noW7Pk3pu2zIIjmQRJ3Wu-OX4PqOFAmQwlISue6H1Gwxase_sZr5wwXxWf0cgMkLtNgKesqekJjE8qeGVQh4KpqWaCjz7v9oCvm9BebSG3qulQsVx9wlEje8t4WobnsRvydBP2kCYZ131LcvdBlgNtycF448wAC6K8D_MX1CFrHQ-F2ZBjr6iqy23oa2mHG6zzeF7ODW31Uf-RHhccUJjk6NNxUBvdzFQ7DowA5y9eoN1-_7Td4j3A8HRvrPUOkmTxabfdSVNzwsMENF5mW1SE-NCDSUN3hpQbj38ZYIKtIE6Dpc3laqWGQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/verify-type-account-not-pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"verify-type-account-not-pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/verify-accounts-payment-date",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAyMTAwNzE2ZmRkOTA0ZTViNGQ0OTExNmZmNWRiZGZjOTg5OTk0MDEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjYxNjg3OTAsInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNjE2ODc5MCwiZXhwIjoxNzI2MTcyMzkwLCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.JYc-2Fwwx7wOJKY0gHnGTu0DmsHZZk4noW7Pk3pu2zIIjmQRJ3Wu-OX4PqOFAmQwlISue6H1Gwxase_sZr5wwXxWf0cgMkLtNgKesqekJjE8qeGVQh4KpqWaCjz7v9oCvm9BebSG3qulQsVx9wlEje8t4WobnsRvydBP2kCYZ131LcvdBlgNtycF448wAC6K8D_MX1CFrHQ-F2ZBjr6iqy23oa2mHG6zzeF7ODW31Uf-RHhccUJjk6NNxUBvdzFQ7DowA5y9eoN1-_7Td4j3A8HRvrPUOkmTxabfdSVNzwsMENF5mW1SE-NCDSUN3hpQbj38ZYIKtIE6Dpc3laqWGQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/verify-accounts-payment-date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"verify-accounts-payment-date"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "financial-accounts",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/create-financial-accounts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU2NjgyNzksInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTY2ODI3OSwiZXhwIjoxNzI1NjcxODc5LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.KO9Y3-RrHs1xS1z-2bwcvT2d6YshoIpcLg0CMNEIDpM5xSKP228hGyb587OW1Pji7HiN3n50IL7LkyixGo8t0r2YQynVpvVCWeZU1lumv-6dq7XPf8LK1UsJXBpAwRvJXvYPmq2ajKkoKaHLtLg7D1HESHh4DBv0cEkaRRKCmDt4OjUtw6rFGKG93ZetVfzKHGoMCOd0FIoVxECVLGbrcsCDdNwF-gUI2ig886x-JsPEl-S6RCcQheI_BFNxiVErYS5e_S6mmWC5uZf7-c5lfrYJ7J2xT7ZVSXmoFMS4oXB5We7_xzeiHLamj8w1Xcwqp13Eq4UQSSGRXCLkTMY9Fw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Conta Corrente 2\",\r\n    \"name_account\": \"luz\",\r\n    \"description\": \"não posso esquecer de pagar\",\r\n    \"status\": false,\r\n    \"priority\": \"Alta\",\r\n    \"paymentDate\": \"2024-09-08\",\r\n    \"price\": 322.22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/create-financial-accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"create-financial-accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/update-financial-accounts",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU2NjgyNzksInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTY2ODI3OSwiZXhwIjoxNzI1NjcxODc5LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.KO9Y3-RrHs1xS1z-2bwcvT2d6YshoIpcLg0CMNEIDpM5xSKP228hGyb587OW1Pji7HiN3n50IL7LkyixGo8t0r2YQynVpvVCWeZU1lumv-6dq7XPf8LK1UsJXBpAwRvJXvYPmq2ajKkoKaHLtLg7D1HESHh4DBv0cEkaRRKCmDt4OjUtw6rFGKG93ZetVfzKHGoMCOd0FIoVxECVLGbrcsCDdNwF-gUI2ig886x-JsPEl-S6RCcQheI_BFNxiVErYS5e_S6mmWC5uZf7-c5lfrYJ7J2xT7ZVSXmoFMS4oXB5We7_xzeiHLamj8w1Xcwqp13Eq4UQSSGRXCLkTMY9Fw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Conta Corrente 2\",\r\n    \"name_account\": \"luz\",\r\n    \"description\": \"não posso esquecer de pagar\",\r\n    \"status\": false,\r\n    \"priority\": \"baixa\",\r\n    \"paymentDate\": \"2024-09-09\",\r\n    \"price\": 402.40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/update-financial-accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"update-financial-accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/update-financial-accounts Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU2NjgyNzksInVzZXJfaWQiOiJMZTVKSFF0anNLUjdCUHRLOWQzRzBET1JUem4xIiwic3ViIjoiTGU1SkhRdGpzS1I3QlB0SzlkM0cwRE9SVHpuMSIsImlhdCI6MTcyNTY2ODI3OSwiZXhwIjoxNzI1NjcxODc5LCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvdmVyc291bHMxMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.KO9Y3-RrHs1xS1z-2bwcvT2d6YshoIpcLg0CMNEIDpM5xSKP228hGyb587OW1Pji7HiN3n50IL7LkyixGo8t0r2YQynVpvVCWeZU1lumv-6dq7XPf8LK1UsJXBpAwRvJXvYPmq2ajKkoKaHLtLg7D1HESHh4DBv0cEkaRRKCmDt4OjUtw6rFGKG93ZetVfzKHGoMCOd0FIoVxECVLGbrcsCDdNwF-gUI2ig886x-JsPEl-S6RCcQheI_BFNxiVErYS5e_S6mmWC5uZf7-c5lfrYJ7J2xT7ZVSXmoFMS4oXB5We7_xzeiHLamj8w1Xcwqp13Eq4UQSSGRXCLkTMY9Fw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_account\": \"Conta Corrente 2\",\r\n    \"name_account\": \"luz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/delete-financial-accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete-financial-accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:5000/api/create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oversouls11@gmail.com\",\r\n    \"password\": \"teste123\",\r\n    \"name\": \"Davi\",\r\n    \"profession\": \"Analista\",\r\n    \"monthlyIncome\": 1220.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oversouls11@gmail.com\",\r\n    \"password\": \"teste123\",\r\n    \"name\": \"Davi\",\r\n    \"monthlyIncome\": 1220.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/reset-password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oversouls11@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/update-user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJvamVjdC1maW5hbmNpYWwtbWFuYWdlbWVudCIsImF1ZCI6InByb2plY3QtZmluYW5jaWFsLW1hbmFnZW1lbnQiLCJhdXRoX3RpbWUiOjE3MjU1Nzg2NzEsInVzZXJfaWQiOiJvTjNBNUNROGl1U3U3QWU0a0dJWXRPS1dzTDEzIiwic3ViIjoib04zQTVDUThpdVN1N0FlNGtHSVl0T0tXc0wxMyIsImlhdCI6MTcyNTU3ODY3MSwiZXhwIjoxNzI1NTgyMjcxLCJlbWFpbCI6Im92ZXJzb3VsczExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm92ZXJzb3VsczExQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.BGpSP6JrWbrn2sMulKol2gCLnlRl-P74bkA3l4Z0qOnnIK-G5v6fgg-9hLpaJsig7oUPoFV0FI264R3roZqFperpHe_5wW20MDzLhbAk03MTI5hXBjCqNbddJgi-c-Qauf-dcuuIMFFtJHV8CuVAk0fualiFrWXfykeHdKCR2hy1kMQi_gCYTJm4OxYfaMcATDmKs7thlkdFyT_aiNbfo7fgNjwcQzLPHh_6v0gO6Q3amg4y_pCRfCxmUpJPhfj13Cwd4D1_tjV_UssMjyO73fJCVMaSDkc9E-jORaZM085UJgh5AkolWDyngtCsO71C0pTQ8Vc59ekr-XYu8PIIsQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Davi\",\r\n    \"email\": \"oversouls11@gmail.com\",\r\n    \"profession\": \"Analista\",\r\n    \"monthlyIncome\": 1450.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/update-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

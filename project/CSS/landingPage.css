@@ -3,6 +3,8 @@ body{
 }
 
 /* Css Responsavel por alterar a parte do branding do site*/
+
+/*Tag de busca = Parte_1 css inicio*/
 .Parte_1 img{
     float: right;
     margin-right: 20px;
@@ -19,7 +21,12 @@ body{
     margin-left: 200px;
 }
 
+/*Tag de busca = Parte_1 css fim*/
+
+
+
 /* CSS responsavel pela a primeira descrição sobre os recurços do site */
+
 
 #funcionalidades_1_btn{
     margin-left: 100px;
@@ -58,6 +65,8 @@ body{
 
 /*Css para a parte 2 do site*/
 
+/*Tag de busca = Parte_2 css Inicio*/
+
 .Parte_2{
     text-align: center;
 }
@@ -93,4 +102,80 @@ body{
 
 .teste ul li p{
     margin-top: 20px;
+}
+
+/*Tag de busca = Parte_2 css Fim*/
+
+
+/*Inicio da parte 3 do css*/
+
+/*Tag de busca = Parte_3 css inicio*/
+.Parte_3{
+    background-color: #ffff;
+    
+}
+.Parte_3 h1 {
+    padding: 70px 0  0  0 ;
+    text-align: center;
+}
+.Parte_3 table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.espaço_tabela{
+    margin-top: 35px;
+    margin-left: 65px;
+}
+
+.Parte_3 table tr td img{
+    width: 58px;
+}
+
+/*Tag de busca = Parte_3 css fim*/
+
+
+/*Inicio da Parte_4*/
+
+/* Tag de busca = Parte_4 Inicio */
+#inicio_Parte_4{
+    text-align: center;
+    padding: 80px 0 0 0;
+}
+.Parte_4 table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.espaço_tabela_parte_4{
+    margin-top: 65px;
+    margin-left: 105px;
+    margin-bottom: 80px;
+}
+
+.Parte_4 table tr td img{
+    width: 48px;
+}
+/* Tag de busca = Parte_4 Fim */
+
+/*Tag de busca = footer Incicio*/
+
+.footer{
+    background-color: #ffff;
+}
+
+.menuFooter{
+    padding: 25px 0 0 0;
+    margin-left: 38.5%;
+}
+
+.container a img{
+    width: 65px;
+    height: 65px;
+    margin-bottom: 35px;
+}
+
+.container p{
+    text-align: center;
+    padding: 20px;
 }

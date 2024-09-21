@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/registro.css">
+    <link rel="shortcut icon" href="../IMG/logo.png.jpeg">
+    <title>Registro</title>
+</head>
+<body>
+    <Header class="header-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="../IMG/logo.png.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+                    FluxoPositivo
+                </a>
+            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quem somos</a>
+                    </li>
+            </div>
+        </nav>
+    </Header>
+
+    <form class="form-container">
+        <img src="../IMG/Edit User.png" class="img-register">
+        <h3 class="form-title">Crie sua conta do seu jeito!</h3>
+        <p class="form-text">Crie sua conta para começar a controlar suas finanças e ter uma ótima gestão!</p>
+        <div class="row">
+            <div class="col-md-6">
+              <label for="email">Email:</label>
+              <input type="email" 
+              class="form-control" 
+              id="email"
+              required>
+            </div>
+            <div class="col-md-6">
+              <label for="nome">Nome:</label>
+              <input type="text" 
+              class="form-control" 
+              id="nome"
+              oninput="validarCampo(this)"
+              required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="emprego">Emprego:</label>
+              <input type="text" 
+              class="form-control" 
+              id="emprego"
+              oninput="validarCampo(this)"
+              required>
+            </div>
+            <div class="col-md-6">
+                <label for="salario">Salário:</label>
+                <input type="number" 
+                class="form-control" 
+                id="salario"
+                oninput="validarCampoNumerico(this)" 
+                required>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="senha">Senha:</label>
+              <input type="password" 
+              class="form-control" 
+              id="senha"
+              oninput="verificarSenhasIguais()"
+              required>
+              <div class="invalid-feedback" id="feedbackSenha">As senhas não coincidem.</div> 
+            </div>
+            <div class="col-md-6">
+              <label for="confirmarSenha">Confirmar Senha:</label>
+              <input type="password" 
+              class="form-control" 
+              id="confirmarSenha"
+              oninput="verificarSenhasIguais()"
+              required>
+              <div class="invalid-feedback" id="feedbackSenha">As senhas não coincidem.</div> 
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="mb-3 form-check mt-4">
+              <input type="checkbox" class="form-check-input" id="botaoVerSenha" onclick="mostrarSenha()">
+              <label class="form-check-label" 
+              for="botaoVerSenha" 
+              style="color: #787878;">Ver senha</label>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-3 form-check mt-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" 
+                for="exampleCheck1" 
+                style=" color: #787878;">Li e concordo com os <a href="#" style="color: #16C64F;">termos de uso</a></label>
+              </div>
+            </div>
+          </div>
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <button type="submit" class="btn btn-success btn-block" >Começar a usar</button>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="mb-3 form-check mt-3">
+                  <label class="form-check-label" 
+                  for="exampleCheck1" 
+                  style=" color: #787878;">Já sou cadastrado. <a href="../login/login.html" style="color: #16C64F;">Quero fazer login!</a></label>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+
+    <!-- Script de Lógica do site -->
+    <script src="../JS/registro.js"></script>
+    <!-- JS Bootstrap Inicio-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+    <!-- JS Bootstrap Fim -->
+</body>
+</html>

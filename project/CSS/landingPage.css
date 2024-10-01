@@ -4,6 +4,11 @@ body{
 
 /* Css Responsavel por alterar a parte do branding do site*/
 
+/* Header*/
+#ordemBotao{
+    float: right;
+}
+
 /*Tag de busca = Parte_1 css inicio*/
 .Parte_1 img{
     float: right;

@@ -11,7 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
-CORS(app)
+CORS(app, resources={ r"/*" : { "origins" : "*" }})
 
 app.register_blueprint(user_routes, url_prefix='/api')
 app.register_blueprint(financial_payments_routes, url_prefix='/api')

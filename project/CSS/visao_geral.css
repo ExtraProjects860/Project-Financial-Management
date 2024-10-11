@@ -1,14 +1,6 @@
 body{
     background-color: #DEF9C4;
 }
-.footer{
-    background-color: #ffff;
-}
-
-.menuFooter{
-    padding: 25px 0 0 0;
-    margin-left: 38.5%;
-}
 
 .container a img{
     width: 65px;
@@ -20,10 +12,6 @@ body{
     text-align: center;
     padding: 20px;
 }
-
-
-
-
 
 .tabelas1 table{
     margin-top: 100px;

@@ -1,0 +1,24 @@
+body {
+    background-color: #DEF9C4 !important;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    border: none;
+}
+
+.list-group-item {
+    background-color: #f8f8f8;
+    border: none;
+}
+
+h5 {
+    color: #4caf50;
+}
+
+i {
+    color: #4caf50;
+    margin-right: 10px;
+}

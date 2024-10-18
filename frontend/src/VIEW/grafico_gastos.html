@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Header_Interno.css">
+    <link rel="stylesheet" href="../CSS/landingPage.css">
+    <link rel="stylesheet" href="../CSS/gráficos_de_gastos.css">
+    <link rel="shortcut icon" href="../IMG/logo.png.jpeg">
+    <title>Grafico de gastos</title>
+</head>
+
+<!--Header Inicio-->
+
+
+<body>
+    <header>
+        <nav class="Header">
+            <a href="alteração_dados.html" class="img1"><img src="../IMG/configurações.png" alt="" style="width: 25px; margin-left: 10px;"></a>
+            <!-- <a href=""  class="img1"><img src="../IMG/sino.png" alt="" style="width: 30px; margin-left: 20px;"></a> -->
+            <ul>
+                <li><a href="visao_geral.html">Visão geral</a></li>
+                <li><a href="grafico_gastos.html">Grafico de gastos</a></li>
+                <li><a href="gastos_categoria.html">Gastos por categoria</a></li>
+                <a style="position: absolute; top: 98px; right: 13px;  transform: translateY(-90%);"><img src="../IMG/logo sem nome.png" alt="" style="width: 80px;"></a>
+            </ul>
+            
+        </nav>
+        
+    </header>
+    <main>
+        <div class="container">
+            <div id="grafico-total-por-tipo-conta" class="grafico-bloco">
+                <canvas id="myChart-total-payments-type-account" width="600" height="200"></canvas>
+            </div>
+
+            <div id="grafico-pagamentos-por-conta" class="grafico-bloco">
+                <canvas id="myChart-payments-type-account" width="600" height="200"></canvas>
+            </div>
+        </div>
+    </main>
+    <!-- Script Dados Api -->
+    <script src="../SERVICES/overviewSpendingChartsService/totalPaymentsTypeAccountService.js"></script>
+    <script src="../SERVICES/overviewSpendingChartsService/paymentsTypeAccountService.js"></script>
+    <script src="../CONFIG/urlAPI.js"></script>
+    <!-- Chart.js Gráficos -->
+    <script src="../SERVICES/overviewSpendingChartsService/BarChartsConfig.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JS Bootstrap Inicio-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Bootstrap Fim -->
+</body>
+
+</html>

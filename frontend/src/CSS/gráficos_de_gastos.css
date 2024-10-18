@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    /* Organiza os gráficos horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que os gráficos "quebrem" de linha se necessário */
+    flex-direction: column;
+}
+
+.grafico-bloco {
+    background-color: white;
+    /* Fundo branco para os blocos */
+    padding: 80px;
+    margin: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    border-radius: 10px;
+    /* Canto arredondado */
+    width: 100%;
+    /* Define a largura de cada gráfico */
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    /* Centraliza o gráfico dentro do bloco */
+}

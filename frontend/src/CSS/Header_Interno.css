@@ -1,0 +1,26 @@
+.Header {
+    padding: 17px;
+    background-color: #fefdf9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Header ul li {
+    display: inline-block;
+    margin-left: 10%;
+
+}
+
+.Header ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.Header ul {
+    margin-top: 3px;
+    margin-left: 20%;
+
+}
+
+.img1 {
+    float: left;
+}

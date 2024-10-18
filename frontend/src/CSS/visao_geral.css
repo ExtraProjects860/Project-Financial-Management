@@ -1,0 +1,80 @@
+body {
+    background-color: #DEF9C4;
+}
+
+.container a img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 35px;
+}
+
+.container p {
+    text-align: center;
+    padding: 20px;
+}
+
+.tabelas1 table {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tabelas1 table tr {
+    margin-left: 50px;
+}
+
+.espacoTabelas {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 35px;
+    margin-left: 100px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+
+.tabela2 table {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+.espacoTabela2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 35px;
+    margin-left: 100px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.espacoTabelas p {
+    color: #adadad;
+}
+
+.espacoTabela2 p {
+    color: #adadad;
+}
+
+.btn-logout {
+    background-color: #16C64F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+    background-color: white;
+    color: #16C64F;
+    border: 1px solid #16C64F;
+}

@@ -1,22 +1,22 @@
 
-function setCurrentMonth() {
-    const currentDate = new Date();
-    const monthNames = [
-        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-    ];
-    const currentMonth = monthNames[currentDate.getMonth()]; 
+// function setCurrentMonth() {
+//     const currentDate = new Date();
+//     const monthNames = [
+//         "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+//         "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+//     ];
+//     const currentMonth = monthNames[currentDate.getMonth()]; 
 
-    document.getElementById('mes').textContent = currentMonth;
+//     document.getElementById('mes').textContent = currentMonth;
 
-    const monthSelect = document.getElementById('mes-select');
-    monthSelect.value = currentMonth; 
-}
+//     const monthSelect = document.getElementById('mes-select');
+//     monthSelect.value = currentMonth; 
+// }
 
-function changeMonth() {
-    const selectedMonth = document.getElementById('mes-select').value;
-    document.getElementById('mes').textContent = selectedMonth;
-}
+// function changeMonth() {
+//     const selectedMonth = document.getElementById('mes-select').value;
+//     document.getElementById('mes').textContent = selectedMonth;
+// }
 
 function addGasto(idGasto, idInput) {
     const inputValue = document.getElementById(idInput).value;
@@ -28,7 +28,7 @@ function addGasto(idGasto, idInput) {
     }
 }
 
-window.onload = setCurrentMonth;
+// window.onload = setCurrentMonth;
 
 function addGasto(categoria) {
     const input = document.getElementById(`gasto-${categoria}`);

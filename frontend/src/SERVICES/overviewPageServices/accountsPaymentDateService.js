@@ -15,6 +15,8 @@ const loadAccountsPaymentDate = async (token, uid) => {
 
     const data = await response.json();
     updateAccountsPaymentDateDisplay(data);
+    console.log(data);
+    console.log(response);
 };
 
 

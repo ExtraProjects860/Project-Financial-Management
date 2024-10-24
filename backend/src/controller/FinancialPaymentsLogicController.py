@@ -25,6 +25,7 @@ class FinancialPaymentsLogicController(FinancialPaymentsController):
             
             aux_dict[type_account] = total
         
+        print(aux_dict)
         return aux_dict
     
     
@@ -40,14 +41,15 @@ class FinancialPaymentsLogicController(FinancialPaymentsController):
         data: dict = self.get_all_payments(idUser)
         
         aux_dict: dict[str, list[str]] = {}
-        aux_list: list[str] = []
         
         for type_account, type_data in data.items():
+            aux_list: list[str] = []
+            
             if not type_data.get('accounts'):
                 continue
 
             for account_name, account_data in type_data['accounts'].items():
-                if account_data["status"] == False:
+                if account_data["status"] == "Não Pago":
                     aux_list.append(account_name)
                     
             aux_dict[type_account] = aux_list
@@ -59,9 +61,10 @@ class FinancialPaymentsLogicController(FinancialPaymentsController):
         data: dict = self.get_all_payments(idUser)
         
         aux_dict: dict[str, list[str]] = {}
-        aux_list: list[str] = []
         
         for type_account, type_data in data.items():
+            aux_list: list[str] = []
+            
             if not type_data.get('accounts'):
                 continue
 
@@ -83,9 +86,9 @@ class FinancialPaymentsLogicController(FinancialPaymentsController):
         data: dict = self.get_all_payments(idUser)
         
         aux_dict: dict[str, list[dict[str, float]]] = {}
-        aux_list: list[dict[str, float]] = []
         
         for type_account, type_data in data.items():
+            aux_list: list[dict[str, float]] = []
                 
             if not type_data.get('accounts'):
                 continue

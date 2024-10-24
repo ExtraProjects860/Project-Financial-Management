@@ -26,7 +26,7 @@ const updateHighestExpensesDisplay = (data) => {
     if (data && data.data) {
         for (const account in data.data) {
             const expenses = data.data[account];
-            highestExpenses.innerHTML += `<strong>${account}</strong>`;
+            highestExpenses.innerHTML += `<br><strong>${account}</strong>`;
 
             expenses.forEach(element => {
                 for (const key in element) {

@@ -49,6 +49,11 @@
                         <div class="espacoTabelas1">
                             <h6>Contas a Pagar </h6>
                             <p id="contasAPagar">No momento você não possui contas a pagar</p>
+                            <button data-bs-toggle="modal" data-bs-target="#reg-modal"
+                                style="color: white; background-color: rgb(41, 84, 224); border: none; padding: 5px 5px; cursor: pointer; border-radius: 5px;font-size: small; margin-top: 15px;">
+                                Mais detalhes
+                            </button>
+
                         </div>
                     </td>
 
@@ -56,6 +61,10 @@
                         <div class="espacoTabelas2">
                             <h6>Saldo Restante</h6>
                             <p id="saldoRestante">Nenhum Saldo para o mês atual</p>
+                            <button data-bs-toggle="modal" data-bs-target="#reg-modal2"
+                                style="color: white; background-color: rgb(41, 84, 224); border: none; padding: 5px 5px; cursor: pointer; border-radius: 5px;font-size: small; margin-top: 15px;">
+                                Mais detalhes
+                            </button>
                         </div>
                     </td>
 
@@ -63,6 +72,10 @@
                         <div class="espacoTabelas3">
                             <h6>Maiores gastos</h6>
                             <p id="maioresGastos">Sem gastos</p>
+                            <button data-bs-toggle="modal" data-bs-target="#reg-modal3"
+                                style="color: white; background-color: rgb(41, 84, 224); border: none; padding: 5px 5px; cursor: pointer; border-radius: 5px;font-size: small; margin-top: 15px;">
+                                Mais detalhes
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -93,6 +106,62 @@
     </div>
 
 
+    <!--Modal para as explicaçoes-->
+
+    <!--Modal Contas a pagar-->
+    <div class="modal" tabindex="-1" id="reg-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contas a pagar</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Neste card, você pode visualizar todas as contas a serem pagas, incluindo suas respectivas datas de vencimento e valores.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Saldo Restante-->
+    <div class="modal" tabindex="-1" id="reg-modal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Saldo Restante</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Neste card, você pode visualizar todo o dinheiro que sobrou após o desconto de todas as despesas.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Maiores Gastos-->
+    <div class="modal" tabindex="-1" id="reg-modal3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Maiores Gastos</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Este card apresenta os seus maiores gastos, juntamente com suas respectivas categorias.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Script de Request para API-->
     <script src="../SERVICES/logoutService.js"></script>
     <script src="../SERVICES/overviewPageServices/remainingBalanceService.js"></script>
@@ -113,6 +182,9 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- JS Bootstrap Fim -->
 </body>

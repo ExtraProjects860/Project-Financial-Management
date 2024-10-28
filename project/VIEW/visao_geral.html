@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../CSS/Header_Interno.css">
     <link rel="stylesheet" href="../CSS/visao_geral.css">
     <link rel="shortcut icon" href="../IMG/logo.png.jpeg">
-    
+
 
     <title>Visão geral</title>
 </head>
@@ -19,13 +19,15 @@
         <nav class="Header">
             <a href="../VIEW/alteração_dados.html" class="img1"><img src="../IMG/configurações.png" alt=""
                     style="width: 25px; margin-left: 10px;"></a>
-            <a href="" class="img1"><img src="../IMG/sino.png" alt="" style="width: 30px; margin-left: 20px;"></a>
+            <a href="javascript:void(0);" class="img1" data-toggle="modal" data-target="#exampleModalCenter">
+                <img src="../IMG/sino.png" alt="" style="width: 30px; margin-left: 20px;">
+            </a>
             <ul>
                 <li><a href="visao_geral.html">Visão geral</a></li>
                 <li><a href="grafico_gastos.html">Grafico de gastos</a></li>
                 <li><a href="gastos_categoria.html">Gastos por categoria</a></li>
-                <a href="../VIEW/index.html" style="position: absolute; top: 98px; right: 13px;  transform: translateY(-90%);"><img
-                        src="../IMG/logo sem nome.png" alt="" style="width: 80px;"></a>
+                <a style="position: absolute; top: 52px; right: 30px;  transform: translateY(-90%);">
+                    <button class="btn-logout" id="logout-button">Logout</button></a>
             </ul>
 
         </nav>
@@ -34,7 +36,8 @@
     <main>
         <div class="tabelas1">
             <table>
-
+                <p style="text-decoration: underline; margin-left: 20px; margin-top: 10px;" id="nameDashBoard">
+                    Bem vindo Fulano</p>
                 <tr>
                     <th></th>
                     <th></th>
@@ -43,34 +46,23 @@
                 <tr>
 
                     <td>
-                        <div class="espacoTabelas">
+                        <div class="espacoTabelas1">
                             <h6>Contas a Pagar </h6>
-                            <p>No momento você não possui contas a pagar</p>
+                            <p id="contasAPagar">No momento você não possui contas a pagar</p>
                         </div>
                     </td>
 
                     <td>
-                        <div class="espacoTabelas">
+                        <div class="espacoTabelas2">
                             <h6>Saldo Restante</h6>
-                            <p>Nenhum Saldo para o mês atual</p>
+                            <p id="saldoRestante">Nenhum Saldo para o mês atual</p>
                         </div>
                     </td>
 
-                </tr>
-
-            </table>
-        </div>
-        <div class="tabela2">
-            <table>
-
-                <tr>
-                    <th></th>
-                </tr>
-                <tr>
                     <td>
-                        <div class="espacoTabela2">
-                            <h6>Maiores gastos do mês</h6>
-                            <p>Sem gastos no período</p>
+                        <div class="espacoTabelas3">
+                            <h6>Maiores gastos</h6>
+                            <p id="maioresGastos">Sem gastos</p>
                         </div>
                     </td>
                 </tr>
@@ -78,6 +70,40 @@
         </div>
     </main>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contas a pagar hoje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="contasAPagarHoje">
+                    Não a contas a pagar hoje
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script de Request para API-->
+    <script src="../SERVICES/logoutService.js"></script>
+    <script src="../SERVICES/overviewPageServices/remainingBalanceService.js"></script>
+    <script src="../SERVICES/overviewPageServices/accountsPayableService.js"></script>
+    <script src="../SERVICES/overviewPageServices/highestExpensesService.js"></script>
+    <script src="../SERVICES/overviewPageServices/accountsPaymentDateService.js"></script>
+    <script src="../CONFIG/urlAPI.js"></script>
+    <!-- Script de pegar dados do LocalStorage -->
+    <script src="../SERVICES/localStorage/getDataAccont.js"></script>
+    <!-- Script de PopUps -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JS Bootstrap Inicio-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

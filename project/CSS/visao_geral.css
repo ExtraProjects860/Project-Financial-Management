@@ -1,51 +1,59 @@
-body{
+body {
     background-color: #DEF9C4;
 }
 
-.container a img{
+.container a img {
     width: 65px;
     height: 65px;
     margin-bottom: 35px;
 }
 
-.container p{
+.container p {
     text-align: center;
     padding: 20px;
 }
 
-.tabelas1 table{
+.tabelas1 table {
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.tabelas1 table tr {
+.espacoTabelas1 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 45px;
+    padding-bottom: 80px;
     margin-left: 50px;
+    text-align: center;
 }
 
-.espacoTabelas{
+.espacoTabelas2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffff;
     border-radius: 12px;
-    padding: 35px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top: 43px;
+    padding-left: 70px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    margin-left: 50px;
+    text-align: center;
 }
 
-
-.tabela2 table{
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 100px;
-}
-
-.espacoTabela2{
+.espacoTabelas3 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffff;
     border-radius: 12px;
-    padding: 35px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-bottom: 88px;
+    padding-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 125px;
+    padding-right: 125px;
+    text-align: center;
 }
+
 
 .espacoTabelas p {
     color: #adadad;
@@ -53,4 +61,24 @@ body{
 
 .espacoTabela2 p {
     color: #adadad;
+}
+
+.btn-logout {
+    background-color: #16C64F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+    background-color: white;
+    color: #16C64F;
+    border: 1px solid #16C64F;
 }

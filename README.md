@@ -33,13 +33,6 @@ progresso do projeto, permitindo a visualização das tarefas e etapas concluíd
 
 ## Esboços do Projeto
 
-## Como Utilizar
-1. Clone este repositório.
-2. Importe o banco de dados MySQL disponível no diretório `database`.
-3. Configure as credenciais do banco de dados no arquivo `ConnectionDatabase.js`.
-4. Execute um ambiente de desenvolvimento Node.js e um como XAMPP, WAMP, ou similar para alocar o banco de dados.
-5. Acesse o site através do seu navegador.
-
 ## Equipe
 
 Este Projeto está sendo desenvolvido pela equipe:

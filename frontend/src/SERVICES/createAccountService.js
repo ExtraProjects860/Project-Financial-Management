@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('senha').value;
         const userName = document.getElementById('nome').value;
         const profession = document.getElementById('emprego').value;
-        const monthlyIncome = document.getElementById('salario').value;
+        const monthlyIncome = parseFloat(document.getElementById('salario').value);
 
         createAccount(email, password, userName, profession, monthlyIncome);
     })

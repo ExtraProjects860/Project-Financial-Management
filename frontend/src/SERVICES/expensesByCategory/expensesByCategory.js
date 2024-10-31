@@ -73,8 +73,10 @@ const deleteTypeAccount = async (token, uid, typeAccount) => {
     }
 };
 
+
 const loadUserExpensesDisplay = (data) => {
     const listGroup = document.getElementById('list-group');
+
     listGroup.innerHTML = `
         <li class="list-group-item list-item-category">
             <div class="innerAddContentContainer">
@@ -94,7 +96,7 @@ const loadUserExpensesDisplay = (data) => {
         </li>
     `;
 
-    if (data && data.success) {
+    if (data && data.success && Object.keys(data.success).length > 0) {
         for (const category in data.success) {
             const categoryData = data.success[category];
             
@@ -114,7 +116,7 @@ const loadUserExpensesDisplay = (data) => {
                     <i class="bi bi-trash-fill delete" data-category="${category}"></i>
                 </div>
             `;
-            
+
             listGroup.appendChild(listItemCategory);
         }
 
@@ -142,7 +144,10 @@ const loadUserExpensesDisplay = (data) => {
             });
         });
     } else {
-        listGroup.innerHTML = 'Não há contas a pagar no momento';
+        const noAccountsItem = document.createElement('li');
+        noAccountsItem.classList.add('list-group-item', 'text-muted');
+        noAccountsItem.textContent = 'Não há contas a pagar no momento';
+        listGroup.appendChild(noAccountsItem);
     }
 
     const createCategoryBtn = document.getElementById('create-category-btn');

@@ -33,6 +33,24 @@ progresso do projeto, permitindo a visualização das tarefas e etapas concluíd
 
 ## Esboços do Projeto
 
+- Tela Inicial
+![Tela Inicial](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Tela%20inicial.PNG)
+
+- Tela de Registro
+![Tela de Registro](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Tela%20Registro.PNG)
+
+- Tela de Login
+![Tela de Login](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Tela%20Login.PNG)
+
+- Tela de Visão Geral
+![Tela de Visão Geral](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Vis%C3%A3o%20Geral.PNG)
+
+- Tela de Gastos por Categoria
+![Tela de Gastos por Categoria](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Gastos%20por%20Categoria.PNG)
+
+- Tela de Alteração de Dados
+![Tela de Alteração de Dados](https://github.com/ExtraProjects860/Project-Financial-Management/blob/main/imgs/Altera%C3%A7%C3%A3o%20de%20Dados.PNG)
+
 ## Equipe
 
 Este Projeto está sendo desenvolvido pela equipe:
